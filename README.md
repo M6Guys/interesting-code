@@ -21,12 +21,12 @@ Init an array with { number : 1 },{ number : 2}.....{ number : 10}
     
     var brr = [];
     for(var i=0;i < 10;i++){
-        brr.push({number:i})
+        brr.push({number:i+1})
     }
 ```
 Well, if you want to zhuangbility, you may like this one.
 ```js
-    var arr = [...Array(10)].map((v,i)=>({number:i}))
+    var arr = [...Array(10)].map((v,i)=>({number:i+1}))
 ```
 
 ### Object copying

@@ -107,3 +107,22 @@ In zhuangbility way
 	});
 
 ```
+
+In more zhuangbility way. Use `then(fn).catch(fn)` is equal to `then(fn).then(null, fn)`, but `catch` make your code more clear than before.
+
+```js
+	// fetch is still an experimental technology, so you should use babel first
+	fetch("/submit", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/x-www-form-urlencoded"
+		},
+		body: "firstName=Nikhil&favColor=blue&password=easytoguess"
+	})
+	.then(function(res) {
+		// on response
+	})
+	.catch(function(err) {
+		// on error
+	})
+```

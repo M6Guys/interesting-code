@@ -126,3 +126,25 @@ In more zhuangbility way. Use `then(fn).catch(fn)` is equal to `then(fn).then(nu
 		// on error
 	})
 ```
+### Type checking
+
+```js
+	var someFn = function(){}
+	//type checking
+	if(typeof someFn === 'function'){
+		//do something here
+	}
+
+```
+
+In zhuangbility way
+
+```js
+	var someFn = function(){}
+	var isFunction = {
+		'function': true
+	}
+	if(isFunction[typeof someFn]){
+		//do something here
+	}
+```

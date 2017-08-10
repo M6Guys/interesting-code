@@ -15,7 +15,7 @@ In [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScri
 >The equality operator converts the operands if they are **not of the same type**, then applies strict comparison. If both operands are objects, then JavaScript compares internal references which are equal when operands refer to the same object in memory.
 
 No more info we could get from it.
-#### First ([] == false)
+### First ([] == false)
 In [Ecma International, 11.9.3 The Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3) :
 >If Type(y) is Boolean, return the result of the comparison x == ToNumber(y)
 
@@ -24,7 +24,7 @@ Obviously, The above-mentioned `([]==![])` is the same as point 7, cause `![]` i
 
 So, in other words, that mean `([]==![])`(also is `([] == false)`) will be converted to `([] == +0)`. 
 
-#### Second ([] == +0)
+### Second ([] == +0)
 Review the [Ecma International, 11.9.3 The Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3) :
 
 >If Type(x) is Object and Type(y) is either String or Number,return the result of the comparison ToPrimitive(x) == y.
@@ -51,7 +51,7 @@ if([].toString)
         return str
 ``` 
 As you see, the `([]==+0)` is converted to `(''==+0)`. 
-#### Finally ('' == +0)
+### Finally ('' == +0)
 Review the [Ecma International, 11.9.3 The Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3) point 5:
 >If Type(x) is String and Type(y) is Number,return the result of the comparison ToNumber(x) == y.
 
